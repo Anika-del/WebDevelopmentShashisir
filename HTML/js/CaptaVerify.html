@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<style>
+		h1
+		{
+			font-size: 90px;
+			letter-spacing: 10px;
+			/*font-family: "Silkscreen", sans-serif;*/
+			font-family: sans-serif;
+  			font-weight: 400;
+		}
+		div input
+		{
+			font-size: 50px;
+		    padding: 5px;
+		    width: 51px;
+		    text-align: center;
+
+		}
+		button
+		{
+			padding:8px;
+			margin-top:5px;
+			background-color: gray;
+			border: none;
+			color:white;
+		}
+		.bg
+		{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+
+<h1 id="cap"></h1>
+<div>
+	<input type="text" maxlength="1">
+	<input type="text" maxlength="1">
+	<input type="text" maxlength="1">
+	<input type="text" maxlength="1">
+	<input type="text" maxlength="1"><br>
+	<button type="button" id="btn">verified</button>
+</div>
+
+<script>
+
+// var captch;
+// function abc()
+// {
+// 	captch = parseInt((Math.random()+1)*4325);
+// 	console.log(captch);
+// 	document.getElementById('cap').innerHTML=captch;
+
+// }
+
+// abc();
+
+
+
+var captch,t, mysubmit,myinput,gencap;
+function abc()
+{
+	mysubmit = document.getElementById('btn');
+	myinput = document.getElementsByTagName('input');
+	captch = parseInt((Math.random()+1)*4325);
+	console.log(captch);
+	if(captch>=6000)
+	{
+		t = "A";
+	}
+	else if(captch>=5500)
+	{
+		t="B";
+	}
+	else if(captch>=5000)
+	{
+		t = "C";
+	}
+	else
+	{
+		t = "D";
+	}
+	gencap = captch+t;
+	document.getElementById('cap').innerHTML=gencap;
+}
+
+abc();
+
+var inputcap;
+mysubmit.addEventListener("click",function(){
+inputcap = myinput[0].value+myinput[1].value+myinput[2].value+myinput[3].value+myinput[4].value;
+
+	if(inputcap=="")
+	{
+		alert("your captch is blank");
+		abc();
+		myblankinput();
+	}
+	else if(inputcap.length!=5)
+	{
+		alert("your captch is not valid");
+		abc();
+		myblankinput();
+	}
+	else
+	{
+		if(inputcap==gencap)
+		{
+			alert("welcome");
+				window.location.href="http://facebook.com";
+		}
+		else
+		{
+			alert("error in page");
+			abc();
+			myblankinput();
+		}
+	}
+
+});
+
+
+
+function myblankinput()
+{
+	myinput[0].value="";
+	myinput[1].value="";
+	myinput[2].value="";
+	myinput[3].value="";
+	myinput[4].value="";
+	myinput[0].focus();
+}
+
+var d;
+myinput[0].addEventListener("input",function(){
+	d = myinput[0].value;
+	mybtn();
+	console.log(d);
+})
+myinput[1].addEventListener("input",function(){
+	d = d+myinput[1].value;
+	mybtn();
+	console.log(d);
+})
+myinput[2].addEventListener("input",function(){
+	d = d+myinput[2].value;
+	mybtn();
+	console.log(d);
+})
+myinput[3].addEventListener("input",function(){
+	d = d+myinput[3].value;
+	mybtn();
+	console.log(d);
+})
+myinput[4].addEventListener("input",function(){
+	d = d+myinput[4].value;
+		if(d==gencap)
+		{
+			// mysubmit.classList.add("bg");
+			mysubmit.style.backgroundColor="green";
+		}
+		else
+		{
+			mybtn();
+		}
+	console.log(d);
+})
+
+function mybtn()
+{
+	mysubmit.style.backgroundColor="red";
+}
+
+
+</script>
+</body>
+</html>

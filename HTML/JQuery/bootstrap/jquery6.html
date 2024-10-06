@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+	<style>
+		*
+		{
+			margin:0 auto;
+			padding:0;
+		}
+		ul
+		{
+			list-style-type: none;
+			display: flex;
+		}
+		ul li
+		{
+			width: 50px;
+			height: 100px;
+			background-color: red;
+			flex:1;
+			margin-left: 2px;
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+<script>
+	
+	
+
+	$(document).ready(function(){
+		$("ul li").mouseover(function(){
+			$("ul li").css({backgroundColor:'red'}).animate({height:100});
+			$(this).next().css({backgroundColor:'green'}).animate({height:200});
+			$(this).prev().css({backgroundColor:'green'}).animate({height:200});
+			$(this).css({backgroundColor:'green'}).animate({height:350});
+		})
+	})
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!--Created by Anika-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearts  Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-image 5s ease-in-out;
+    }
+
+    .message-container {
+      max-width: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.3); /* opacity is set to 0.3 So I can view background*/
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #FF69B4; /* Hot pink color */
+      animation: pulse 2s infinite; /* Animation for the header */
+    }
+
+    p {
+      font-size: 18px;
+      color: #333; /* Dark grey color */
+    }
+
+    em {
+      font-style: italic;
+      font-weight: bold;
+      color: #FF4500; /* Orange color */
+    }
+
+    #userMessage {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    #sendButton {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4478B1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #sendButton:hover {
+      background-color: #45a049;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h2>A mother's love!</h2>
+    <p>
+      To the queen of all mothers,<br>
+      The love you've shown me is truly unique. We've been through our ups and downs, but you'll forever be my first love and the soul of my being. Whenever I 
+      stumble, 
+      you're always there to lift me up, a constant source of strength and support.<br>
+      You are my heart, my soul, my guiding light. Though I'm far from perfect, you embrace me with all my imperfections, filling the voids in my soul with your 
+      unwavering love.<br>
+      <em>With all my love,</em>
+      <br>
+      <b>Anika</b>
+    </p>
+    <textarea id="userMessage" placeholder="Create your message here..."></textarea><br>
+    <button id="sendButton">Send to Mom</button>
+  </div>
+
+  <script>
+    var images = [
+      "https://media.istockphoto.com/id/1446885488/photo/happy-mama-with-girl-child-hug-in-home-and-weekend-play-time-lifestyle-for-mom-parent-funny.jpg?s=612x612&w=0&k=20&c=zsW4hEXmcYLqniMMOvgF7Akhc-6LT539mwMfJoK2A6Q=",
+      "https://media.istockphoto.com/id/1388172759/photo/mothers-day-design-concept-background-with-pink-rose-flower-on-pink-background.jpg?s=612x612&w=0&k=20&c=oRqZ1nHkdlU00T5XO6FUMYYXY_fpPBD0KYokGKfid1M=",
+      "https://media.istockphoto.com/id/1151608467/vector/vector-illustration-happy-mothers-day.jpg?s=612x612&w=0&k=20&c=bj3T5cf002rykRIQmyKGqpDoYNMqwv8fGbiZS4M7cRA=",
+      "https://media.istockphoto.com/id/1479705879/vector/vector-set-of-mothers-day-poster-design-template-in-paper-cut-style-mother-and-her-child-in.jpg?s=612x612&w=0&k=20&c=rvbbkPbct_cmMHsPctdGnDFZG1kVEzmszRVDWtrkhbY="
+    ];
+    var currentIndex = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundImage = "url('" + images[currentIndex] + "')";
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 2000);
+
+    document.getElementById("sendButton").addEventListener("click", function() {
+      var userMessage = document.getElementById("userMessage").value;
+      if (userMessage.trim() === "") {
+        alert("Please write a message before sending.");
+      } else {
+        // space to modify later
+        alert("Message sent to Mom: " + userMessage);
+        // Clear the message after sending 
+        document.getElementById("userMessage").value = "";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+<input type="password" id="user">
+<input type="button" value="show">
+
+
+<script>
+	
+	// $(document).ready(function(){
+	// 	$("input[type='button']").click(function(){
+	// 		$("#user").attr("type","text");
+	// 		$(this).attr("value","hide");
+	// 	})
+	// })
+
+
+	$(document).ready(function(){
+		$("input[type='button']").click(function(){
+			var a=$(this).val();
+			console.log(a);
+			if(a=="show")
+			{
+				$("#user").attr("type","text");
+				$("input[type='button']").attr("value","hide");
+			}
+			else
+			{
+				$("#user").attr("type","password");
+				$("input[type='button']").attr("value","show");
+			}
+		})
+	})
+	
+</script>
+
+
+</body>
+</html>

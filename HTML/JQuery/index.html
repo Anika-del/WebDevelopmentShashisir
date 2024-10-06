@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		div
+		{
+			width:300px;
+			height: 200px;
+			background-color: orange;
+			padding:20px;
+		}
+	</style>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+	<script src="jquerydownload.js"></script>
+</head>
+<body>
+
+<div> 
+	jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animations, and Ajax. It is free, open-source software using the permissive MIT License. As of A
+	ugust 2022, jQuery is used by 77% of the
+</div>
+	
+<button type="button" value="hide">hide</button>
+<button type="button" value="show">show</button>
+<button type="button" value="show/hide">show</button>
+
+
+<script>
+
+	// $(document).ready(function(){
+
+	// 	$("button").click(function(){
+
+	// 		// $("div").hide("fast");
+	// 		// $(this).hide(8000);
+	// 		$("div").hide(8000);
+	// 	})
+
+	// })
+
+
+	// $(document).ready(function(){
+
+	// 	$("button[value='hide']").click(function(){
+	// 		$("div").hide(800);
+	// 	});
+
+	// 	$("button[value='show']").click(function(){
+	// 		$("div").show(800);
+	// 	})
+
+	// })
+
+
+$(document).ready(function(){
+
+		$("button[value='show/hide']").click(function(){
+			$("div").toggle(800);
+		});
+
+	})
+
+
+
+</script>
+
+
+
+
+</body>								
+</html>

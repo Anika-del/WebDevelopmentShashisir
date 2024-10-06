@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+	<style>
+		div
+		{
+			width:100px;
+			height:100px;
+			background-color: red;
+
+		}
+	</style>
+</head>
+<body>
+<div>css animate</div>
+
+
+<script>
+	var a=200;
+	var b =100;
+	$(document).ready(function(){
+		$("div").click(function(){
+			$(this).animate({width:a});
+			a=a+100;
+			if(a>1200)
+			{
+				a=100;
+				$("div").animate({height:b});
+				$("div").css({width:'100px'})
+				b=b+100;
+				if(b >=800)
+				{
+					$("div").css({width:'100px',height:'100px',backgroundColor:'green'})
+					.animate({borderRadius:30});
+					b=100;
+				}
+			}
+		})
+	})
+	
+</script>
+
+
+</body>
+</html>

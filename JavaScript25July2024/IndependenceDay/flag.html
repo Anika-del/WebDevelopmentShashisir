@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+
+<style>
+    rect{stroke-dasharray:1000;
+animation:dash 6s linear 1 ;
+-webkit-animation:dash 6s linear 1 ;
+-ms-animation:dash 6s linear 1 ;
+stroke-dashoffset:1000;}
+circle{
+    stroke-dasharray:1000;
+animation:dash 15s linear 1;
+-webkit-animation:dash 15s linear 1;
+-ms-animation:dash 15s linear 1;
+stroke-dashoffset:1000;
+}
+line,path{stroke-dasharray:1000;
+animation:dash 30s linear infinite;
+-ms-animation:dash 30s linear infinite;
+-webkit-animation:dash 30s linear infinite;
+stroke-dashoffset:1000;
+    }
+@-webkit-keyframes dash{
+from{stroke-dashoffset:1000;}
+    to{stroke-dashoffset:0;}
+}
+@-ms-keyframes dash{
+from{stroke-dashoffset:1000;}
+    to{stroke-dashoffset:0;}
+}
+@keyframes dash{
+from{stroke-dashoffset:1000;}
+    to{stroke-dashoffset:0;}
+}
+
+p{
+    color:#ffffff;
+    text-align:center;
+    font-size:35px;
+    font-family:cursive;
+}
+rect{transition:2s all linear;
+-webkit-transition:2s all linear;
+-ms-transition:2s all linear;
+-moz-transition:2s all linear;
+}
+</style>
+<body style="background-color:#222">
+
+<svg height="300" width="300">
+ <rect id="r" width="235" height="60" x="50" y="70" stroke="rgb(200,60,0)" fill="transparent" stroke-width="2" ></rect> <rect id="r3" width="235" height="60" x="50" y="190" stroke="green" fill="transparent" stroke-width="2" ></rect> 
+   <rect id="r2" width="235" height="63" x="50" y="128" stroke="white" fill="transparent" stroke-width="2" ></rect> 
+   <circle id="c" cx="161" cy="159.5"  r="29.5" stroke="white" stroke-width="4" fill="rgb(0,0,200)"></circle>
+   <line x1="180" y1="135" x2="145" y2="185" stroke="white" stroke-width="1" />
+<line x1="150" y1="130" x2="170" y2="185" stroke="white" stroke-width="1" />
+<line x1="163" y1="130" x2="160" y2="190" stroke="white" stroke-width="1" />
+<line x1="140" y1="138" x2="180" y2="182" stroke="white" stroke-width="1" />
+<path stroke="white" stroke-width="1" d="M130 161 H190" />
+<path stroke="white" stroke-width="1" d="M130 167 L190 155" />
+<path stroke="white" stroke-width="1" d="M190 165 L130 157" />
+<path stroke="white" stroke-width="1" d="M132 147 L185 173" />
+<path stroke="white" stroke-width="1" d="M187 147 L134 177"/>
+<path stroke="white" stroke-width="1" d="M170 130 L153 188"/>
+<path stroke="white" stroke-width="1" d="M158 130 L163 188" />
+</svg>
+<p>Happy Independence Day</p>
+
+<script>
+    onload=function(){
+   var t=setTimeout(india,3000);
+    function india(){document.getElementById("r").style.fill="rgb(200,60,0)";
+    document.getElementById("r2").style.fill="white";
+document.getElementById("r3").style.fill="green";
+document.getElementById("c").style.fill="rgb(50,50,200)";
+}}
+</script>
+</body>
+</html>

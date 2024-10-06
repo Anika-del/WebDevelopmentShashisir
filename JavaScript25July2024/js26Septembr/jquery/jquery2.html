@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: auto;
+            border: 1px solid red;
+            padding:10px;      
+            background-color: black;
+            color:white;                                 
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Query is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event
+            handling, CSS animations, and Ajax. It is free, open-source </p>
+        <main>Query is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as
+            event handling, CSS animations, and Ajax. It is free, open-source software using the permissive MIT License.
+            As of August 2022, jQuery is used by 77% of the 10 million most popular websites.Query is a JavaScript
+            library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS
+            animations, and Ajax. It is free, open-source software using the permissive MIT License. As of August 2022,
+            jQuery is used by 77% of the 10 million most popular websites.</main>
+
+        
+    </div>
+
+    <input type="text">
+    <p>rr</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+   $("main").hover(function(){
+    $(this).fadeTo(200,0.5);
+   })
+
+   $("div").dblclick(function(){
+    $(this).css({color:"red",backgroundColor:'green'});
+   })
+
+   $("input").inpu
+
+
+})
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program2 meuse huaa h </title>
+</head>
+<body>
+    <!-- When you run this code and click the button, you'll be prompted to enter some text. If you enter a valid color value (e.g., "red", "#FF0000", "rgb(255, 0, 0)"), 
+     the background color of the page will change to that color. If you enter an invalid color value, the background color won't change. -->
+
+<input type="button" value="dyninputfuncion" onclick="dyninput()">
+
+
+<script>
+    var a=10;
+    function dyninput() //dyninput() function is defined. This function will be called when the button is clicked.
+    {
+        var b = prompt(); // prompt() function to display a dialog box that prompts the user to enter some text. 
+        console.log(b);   // value of b to the console, so you can see what the user entered.
+        console.log(typeof(b));
+        document.bgColor=b;  //sets the background color of the HTML document to the value entered by the user. Note that bgColor is a
+        // deprecated property, and it's not recommended to use it. Instead, you can use document.body.style.backgroundColor = b; to achieve the same effect.
+    }
+
+
+</script>
+    
+</body>
+</html>

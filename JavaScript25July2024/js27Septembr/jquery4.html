@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        ul
+        {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row-reverse;
+            height: 50px;
+            align-items: center;
+        }
+        ul li
+        {
+            flex:1;
+            text-align: center;
+            border:1px solid red;
+            padding:10px;
+            background-color: orange;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 2px 5px 5px black;
+            position: relative;
+            margin-left: -15px;
+           
+
+        }
+        .bg
+        {
+            background-color: red;
+            color:yellow;
+        }
+        .bg1
+        {
+            background-color: rgb(255, 80, 80);
+            color:yellow;
+        }
+        .bg2
+        {
+            background-color: rgb(245, 144, 144);
+            color:yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+ <ul>
+    <li>Home1</li>
+    <li>Home2</li>
+    <li>Home3</li>
+    <li>Home4</li>
+    <li>Home5</li>
+    <li>Home6</li>
+    <li>Home7</li>
+    <li>Home8</li>
+    <li>Home9</li>
+    <li>Home10</li>
+    <li>Home11</li>
+    <li>Home12</li>
+ </ul>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+       $("ul>li").click(function(){
+        $("ul li").removeClass("bg , bg1");
+        $(this).addClass("bg");
+        $(this).next().addClass("bg1");
+        $(this).prev().addClass("bg1");
+        $(this).prevUntil("ul>li:nth-child(8)").addClass("bg1");
+       }) 
+
+    })
+
+
+    </script>
+
+</body>
+
+</html>

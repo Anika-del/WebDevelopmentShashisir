@@ -1,0 +1,63 @@
+body {
+    background-image:url("");
+    background-repeat:no-repeat;
+}
+.saffron{
+    height:70px;
+    width:290px;
+    background-color:orange;
+    border:2px solid #000;
+    font-size:30px;
+    font-weight:bold;
+    color:yellow;
+    text-shadow:4px 3px pink;
+    animation:flags 2s 1;
+}
+.white{
+    height:70px;
+    width:290px;
+    background-color:#ffffff;
+    border:2px solid #000;
+    animation:flags 2s 1;
+}
+.green{
+    height:70px;
+    width:290px;
+    background-color:green;
+    border:2px solid #000;
+    font-weight:bold;
+    font-size:25px;
+    text-shadow:2px 2px pink;
+    animation:flags 2s 1;
+    color:yellow;
+}
+#chakra{
+    margin-top:3px;
+    animation:chakra 6s 1;
+}
+@keyframes chakra{
+    from{transform:rotateZ(50deg); opacity:0.12;}
+    to{transform:rotateZ(360deg); opacity:0.55;}
+}
+#h1{
+    animation:ha 2s infinite;
+}
+@keyframes ha{
+    40%{text-shadow:2px 1px #bff;}
+    30%{text-shadow:1px 2px pink;}
+}
+.container{
+    height:100%;
+    width:100%;
+    background-color:pink;
+    border:2px solid black;
+    animation:utf 1s 1;
+}
+@keyframes utf{
+    from{height:0px; width:100%;}
+    to{height:100%; width:100%;}
+}
+@keyframes flags{
+    from{height:0px;}
+    to{height:70px;}
+}

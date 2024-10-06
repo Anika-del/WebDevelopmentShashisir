@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+	<style>
+		.wrap
+		{
+			width: 1200px;
+			height: auto;
+			padding: 20px;
+			box-sizing:border-box;
+			background-color: lightgreen;
+			margin-top:10px;
+		}
+		.more
+		{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+
+<div class="wrap">
+Because :input is a jQuery extension and not part of the CSS specification, queries using :input cannot take advantage of the performance boost provided by the native DOM querySelectorAll() method. To achieve the best performance when using :
+	input to select elements, first select the elements using a pure CSS selector, then use
+
+<div class="more"> Because :input is a jQuery extension and not part of the CSS specification, queries using :input cannot take advantage of the performance boost provided by the native DOM querySelectorAll() 
+	method. To achieve the best performance when using :input to select elements, first select the elements using a pure CSS selector, then useBecause :input is a jQuery extension and not part of the CSS specification, 
+	queries using :input cannot take advantage of the performance boost provided by the native DOM querySelectorAll() method. To achieve the best performance when using :input to select elements, first select the elements using a pure CSS selector, 
+	then useBecause :input is a jQuery extension and not part of the CSS specification, queries using :input cannot take advantage of the performance boost provided by the native DOM querySelectorAll() method. To achieve the best performance when using 
+	:input to select elements, first select the elements using a pure CSS selector, then useBecause :input is a jQuery extension and not part of the CSS specification, queries using :input cannot take advantage of the performance boost provided by the 
+	native DOM querySelectorAll() method. To achieve the best performance when using :input to select elements, first select the elements using a pure CSS selector, then use
+</div>
+
+<h2>more</h2> 
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$("h2").click(function(){
+			$(".more").slideToggle(600,function(){
+				var a= $("h2").text();
+				if(a=="more")
+				{
+					$("h2").text("less");
+				}
+				else
+				{
+					$("h2").text("more");
+				}
+			});
+		})
+
+	})
+</script>
+
+
+</body>
+</html>

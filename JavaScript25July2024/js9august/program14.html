@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+   
+    <script>
+
+function pageload()
+{
+    var allheading = document.querySelectorAll('h1');
+    var myscreen = window.screen;
+    console.log(myscreen);
+    // allheading[0].innerHTML="screen width: "+myscreen.width;
+    allheading[0].innerHTML=`screen width: ${myscreen.width}`;
+    allheading[1].innerHTML=`screen height: ${myscreen.height}`;
+    allheading[2].innerHTML=`screen orientation: ${myscreen.orientation.type}`;
+    var name="kumar";
+    var b=`The World Wide Web is an
+     information system that enables content sharing 
+     over <br> the Internet name:${name} through user-friendly ways 
+     meant to appeal to users beyond IT specialists and 
+     hobbyists`;
+    console.log(b);
+
+}
+
+pageload();
+       
+
+    </script>
+
+</body>
+
+</html>

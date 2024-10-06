@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first
+        {
+            border:2px solid red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text">
+    <button>submit</button>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var a = 10;
+            var m = 100;
+            $("button").click(function () {
+                $("input").animate({ marginLeft: m, padding: a });
+                a = a + 10;
+                m = m + 100;
+                if (m >= 500) {
+                    m = 100;
+                    a = 10;
+                    $("input").attr("placeholder","username");
+                }
+            });
+
+            $("input").click(function(){
+                // $(this).removeAttr("placeholder");
+                // $(this).addClass("first");
+
+                $(this).removeAttr("placeholder").addClass("first");
+            })
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

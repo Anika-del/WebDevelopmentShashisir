@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+</head>
+<body>
+
+<input type="text">
+<h1>mytextarea</h1>
+
+
+<script>
+	$(document).ready(function(){
+
+		// $("input").change(function(){
+		// 	var a=$("input").val();
+		// 	console.log(a);
+		// })
+		var a= $("input");
+			a[0].addEventListener("input",function(){
+				var b = a[0].value;
+				console.log(b);
+				$("h1").text(b);
+			})
+		console.log(a);
+
+	})
+</script>
+
+
+</body>
+</html>

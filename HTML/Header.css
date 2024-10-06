@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    color: white;
+}
+#navbar{
+    height: 60px;
+    background-color: black;
+ 
+    
+}
+button{
+    background-color: #f08804;
+}
+input{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 250px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.content-box{
+    height: 50px;
+    background-color: #f08804;
+    margin-top: 5px;
+    border: 2px solid rgb(15, 7, 7);
+}
+#content{
+     height: 803px;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(116, 31, 31);
+    color: rgb(175, 153, 153);
+    /* margin-top: 643px; */
+    text-align: center;
+    
+}

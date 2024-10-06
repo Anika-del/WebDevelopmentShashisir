@@ -1,0 +1,14 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+.abc
+{
+    width:200px;
+    height: 500px;
+    background-color: orange;
+    margin-left:0;
+    /* transition-duration: 1s; */
+}

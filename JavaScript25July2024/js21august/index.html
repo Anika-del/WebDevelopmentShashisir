@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Data Sorter</title>
+  <style>
+    /* Add some basic styling to the container and list */
+    #index-container {
+      width: 50%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #index-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #index-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #index-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Create a container to display the index data -->
+  <div id="index-container">
+    <!-- Create a button to toggle the sort order -->
+    <button id="sort-button">Sort A-Z</button>
+    <!-- Create a list to display the index data -->
+    <ul id="index-list"></ul>
+  </div>
+
+  <script>
+    // Get the index data from an API or a local array
+    const indexData = [
+      { id: 1, name: "Apple" },
+      { id: 2, name: "Banana" },
+      { id: 3, name: "Cherry" },
+      { id: 4, name: "Date" },
+      { id: 5, name: "Elderberry" },
+      // ...
+    ];
+
+    // Get the HTML elements
+    const indexContainer = document.getElementById("index-container");
+    const sortButton = document.getElementById("sort-button");
+    const indexList = document.getElementById("index-list");
+
+    // Initialize the sort order to A-Z
+    let sortOrder = "az";
+
+    // Function to render the index list
+    function renderIndexList() {
+      indexList.innerHTML = "";
+      indexData.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item.name;
+        indexList.appendChild(listItem);
+      });
+    }
+
+    // Function to sort the index data
+    function sortIndexData() {
+      if (sortOrder === "az") {
+        indexData.sort((a, b) => a.name.localeCompare(b.name));
+        sortButton.textContent = "Sort Z-A";
+        sortOrder = "za";
+      } else {
+        indexData.sort((a, b) => b.name.localeCompare(a.name));
+        sortButton.textContent = "Sort A-Z";
+        sortOrder = "az";
+      }
+      renderIndexList();
+    }
+
+    // Add an event listener to the sort button
+    sortButton.addEventListener("click", sortIndexData);
+
+    // Render the index list initially
+    renderIndexList();
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- This code uses a for loop to iterate over the heading NodeList and update the innerHTML of each <h1> element with the current value of a. -->
+
+
+    <input type="button" value="submit" onclick="abc()">
+    <h1>ee</h1>
+    <h1>rrr</h1>
+    <h1>ttt</h1>
+    <h1>yyyy</h1>
+    <h1>uuuu</h1>
+    
+
+<script>
+    var a = 10;
+    function abc()
+    {
+        var heading = document.querySelectorAll("h1");
+        // console.log(heading);
+        // console.log(typeof(heading));
+        // console.log("this is welcome"+a);
+        // heading[1].innerHTML=a;
+        // heading[2].innerHTML=a;
+        // heading[3].innerHTML=a;
+        // heading[4].innerHTML=a;
+
+        console.log(a);
+        a++;
+            if(a>=20)
+            {
+                clearInterval(b);
+               
+            }
+
+    }
+
+    const b = setInterval("abc()",500);
+
+</script>
+
+    
+</body>
+</html>

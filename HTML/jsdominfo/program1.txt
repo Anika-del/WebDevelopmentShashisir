@@ -1,0 +1,33 @@
+function first()
+{
+	alert("welcome");
+	second();
+}
+
+
+function second()
+{
+	document.bgColor="red";
+}
+
+
+
+var a;
+function myallelement()
+{
+	// a = document.getElementById("first");
+	// console.log(a);
+	// console.log(typeof(a));
+	// alert(a);
+
+	// a = document.getElementsByClassName('one');
+	// a = document.getElementsByTagName("section");
+
+	a = document.querySelectorAll('.one');
+
+	console.log(a);
+
+
+
+}
+myallelement();

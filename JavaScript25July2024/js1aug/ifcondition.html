@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<body>
+
+
+    <input type="button" value="submit" onclick="abc()" ondblclick="abcd()">
+    
+
+<script>
+    var a = 10;
+    function abc()
+    {
+        console.log("this is welcome "+ a);
+        a++;
+            if(a>=20)
+            {
+                clearInterval(b);
+                //  This line checks if the value of a is 
+                //greater than or equal to 20. If it is, the clearInterval() function is called with the argument b, which will stop the interval timer.
+            }
+    }
+
+    const b = setInterval("abc()",1000);
+    // const b = setInterval("abc()",2000);
+    //function every 2000 milliseconds (or 2 seconds). The b variable holds the ID of the interval timer.
+</script>
+
+
+
+
+<!-- my practices -->
+<script>
+    function abcd()
+{
+    console.log("this is welcome second"+a);
+    a++;
+    if(a>=10)
+    {
+        clearInterval(b);
+    }
+    clearInterval(b); // add this line to stop the interval timer
+}
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!--
+This website is inspired from CodeWithHarry's channel.
+Here's the link of the video where I got inspiration 👇
+https://youtu.be/8KVrdL0VcAk
+
+So for those who are saying that this is copied code then you can compare his and mine website
+
+There are lot of differences you can see.
+So this is not a copied one
+Thanks for your understanding
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML</title>
+    <!-- HTML -->
+    <!-- Custom Styles -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="phone.css" media="screen and (max-width: 1400px)" /> -->
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation Bar */
+.container{
+    position: sticky;
+    flex-direction: column;
+}
+
+/* Home*/
+
+#home{
+    margin: auto;
+}
+
+#black{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20rem;
+    width: 20rem;
+    margin-top: 3rem;
+}
+
+#black p{
+    font-size: 1rem;
+    width: 15rem;
+    margin: 5px;
+    padding: 5px;
+    margin: 15px 5px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#black h1{
+    margin-top: 4px;
+}
+
+#black button{
+    display: block;
+    margin: auto;
+}
+
+
+/* Services*/
+
+#services{
+    flex-wrap: wrap;
+}
+
+.servBox{
+    width: 80vw;
+    margin: 2rem auto;
+}
+
+.servBox p{
+    padding: 1rem;
+}
+
+/* Contact Form */
+.form{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input{
+    display: block;
+    width: 15rem;
+    margin: auto;
+}
+
+#feedback{
+    display: block;
+    width: 15rem;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+#footer{
+    height: 12rem;
+}
+
+#footer li a{
+    /* margin: 2px; */
+    font-size: 0.8rem;
+}
+
+
+/* Utility Classes */
+.btn{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.heading-primary {
+    font-size: 2rem;
+}
+</style>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://i.ibb.co/n0f1MT4/Pics-Art-12-13-11-54-50.jpg" alt="logo" border="0">
+                    </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#serv">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home">
+        <div id="black">
+            
+        <h1 class="heading-primary center">
+            Welcome to Food Point
+        </h1>
+        <p class="center">Lorem ipsum dolor sit amet, consectetur adip
+            iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimis nostrud exercitation ullamco laborisip ex ea</p>
+
+            <button class="btn" type="submit">Order Now</button>
+        </div>
+    </section>
+    
+    <section id="serv">
+        <h1 class="heading-primary center">Our Services</h1>
+        <div id="services">
+        
+            <div class="servBox" id="servBox1">
+                <h2 class="heading-secondary">Food Ordering</h2>
+                <img src="https://i.ibb.co/pZxzrHL/images-1.jpg" alt="food ordering">
+                <p class="center">Lorem ipsum se dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                
+            </div>            
+            <div class="servBox" id="servBox2">
+                <h2 class="heading-secondary">Fast Delivery</h2>
+                <img src="https://i.ibb.co/9TKJWWc/images-2.jpg" alt="fast delivery">
+                <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                
+            </div>            
+            <div class="servBox" id="servBox3">
+                <h2 class="heading-secondary">Catering</h2>
+                <img src="https://i.ibb.co/vJvrgVp/1776716.jpg" alt="catering">
+                <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                
+            </div>            
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h1 class="heading-primary center">
+            Contact Us
+        </h1>
+        <div class="form">
+            
+        <form action="#" method="get" accept-charset="utf-8">
+            
+            <input type="text" name="name" id="name" class="element" placeholder="Name"/><br />
+            
+            <input type="email" name="Email" id="Email" class="element" placeholder="E-mail"/><br />
+            
+            <textarea name="feedback" id=feedback rows="8" cols="20" class="element" placeholder="Enter Your Thoughts..."></textarea>
+            
+            <input type="submit" name="submit" id="submit"
+            class="btn"/>
+        </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div id="footer" class="center">
+            <ul id="about" class="flex">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            
+            <ul class="flex" id="follow">
+                <li class="bold">Follow us</li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+            </ul>
+            
+            <hr />
+            <ul id="policy" class="flex">
+                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="#">Cookies Policy</a></li>
+                <li><a href="#">Legal Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            
+            <p>2020 &copy; All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+Rd6rMk3MB

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .objdesign
+    {
+        color:rgb(255, 0, 0);
+        font-size: 20px;
+        width: 200px;
+        border:none;
+    }
+    .second
+    {
+        padding:10px;
+    }
+    .third
+    {
+        box-shadow: 5px 5px 10px black;
+    }
+    section
+    {
+        border:1px solid gray;
+        padding:10px;
+    }
+</style>
+
+</head>
+<body>
+
+
+<section>
+
+</section>
+
+
+
+<script>
+var myobj = document.createElement("input");
+document.body.appendChild(myobj);
+myobj.setAttribute("value","username");
+myobj.setAttribute("id","one");
+
+// myobj.style.backgroundColor="red";
+
+// myobj.className="objdesign";
+
+myobj.classList.add("objdesign","second","third");
+
+myobj.addEventListener("click",()=>{
+    var a = document.querySelectorAll('section');
+        a[0].appendChild(myobj);
+
+})
+
+
+
+</script>
+    
+</body>
+</html>

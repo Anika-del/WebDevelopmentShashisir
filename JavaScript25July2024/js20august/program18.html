@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="myinput" placeholder="enter name/number"> <span>Total Length:<span id="count"></span></span><br>
+    <select id="opt">
+        <option hidden>select direction</option>
+        <option>left</option>
+        <option>right</option>
+    </select>
+    <input type="button" value="add" onclick="adddata()">
+    <input type="button" value="remove" onclick="removedata()">
+    <div></div>
+
+
+
+    <script>
+        var myarr = [10, 20, 30, 50, 40, 50, "kumar"];
+        var a, disp, jopt,jcount;
+        function loadallobject() {
+            a = document.getElementById('myinput');
+            disp = document.querySelectorAll("div");
+            jopt = document.getElementById('opt');
+            jcount = document.getElementById('count');
+            
+            disp[0].innerHTML = `<pre>${myarr}<pre>`;
+            jcount.innerText=myarr.length;
+                console.log(myarr);
+
+        }
+
+        loadallobject();
+
+        // function adddata()
+        // {
+        //     // const a = document.getElementById('myinput');
+        //     // myarr.unshift(a.value);
+        //     myarr.push(a.value);
+        //     console.log(myarr);
+        //     loadallobject();
+        // }
+
+
+        function adddata() {
+            if (jopt.value == "left") {
+                myarr.unshift(a.value);
+            }
+            else if (jopt.value == "right") {
+                myarr.push(a.value);
+            }
+            else {
+                alert("please select direction to add data");
+            }
+            loadallobject();
+        }
+
+
+        function removedata() {
+            if (jopt.value == "left") {
+                myarr.shift();
+            }
+            else if (jopt.value == "right") {
+                myarr.pop();
+            }
+            else {
+                alert("select direction to remove data");
+            }
+            loadallobject();
+        }
+
+    </script>
+
+</body>
+
+</html>

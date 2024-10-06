@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM selector</title>
+</head>
+<body>
+    <!-- querySelectorAll() method returns a NodeList, which is an array-like object. You can access the elements 
+     in the NodeList using bracket notation (e.g., a[0], a[1], etc.). -->
+
+<div class="first">
+    this is first
+</div>
+<h1>this is heading 1</h1>
+<h1>this is heading 2</h1>
+<h1>this is heading 3</h1>
+<p id="one">this is text</p>
+<input type="button" value="submit">
+<section class="first"> this is second</section>
+
+<input type="button" value="run func" onclick="abc()">
+
+
+<script>
+function abc()
+{
+    // var a = document.getElementById('one');
+    // var a=document.getElementsByClassName('first');
+    // console.log(a[0]);
+    // console.log(typeof(a[0]));
+    // var a=document.getElementsByTagName('h1');
+    //or
+    var a = document.querySelectorAll(".first,#one,h1");
+    // var a = document.querySelectorAll(".first,#one,h1");: This line uses the querySelectorAll() method to select all elements that match the following criteria:
+//Elements with a class of "first" (.first).
+//An element with an ID of "one" (#one).
+//All h1 elements (h1).
+
+    console.log(a);
+    console.log(typeof(a)); //eturns a NodeList, typeof(a) will be "object".
+    a[0].innerHTML="Anika <span> Patel </span> Mrj";   //simple html output
+    a[1].innerText=" Roli <span> Patel</span> Noida";   //print all tags appears like trated as all tags text
+}
+
+</script>
+</body>
+</html>

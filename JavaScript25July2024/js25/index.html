@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('style.css');
+    </style>
+</head>
+<body>
+
+<!-- how JavaScript can be used in different ways to achieve different effects in an HTML document.
+ Using inline JavaScript to change the text color
+Using internal JavaScript to call a function
+Using external JavaScript to change the background color
+Using event listeners to stop and start a marquee animation
+Using a button to call a JavaScript function -->
+  
+<input type="button" value="submit" onclick="abc()">
+<!-- onclick attribute that calls a function abc() -->
+<input type="button" value="internal" onclick="abcd()">
+<!-- onclick attribute that calls a function abcd() -->
+
+<section onclick="this.style.color='red'"> inline js link</section>
+<!-- onclick attribute that changes the text color to red when clicked. -->
+
+<marquee onmouseover="this.stop()" onmouseout="this.start()">moving text</marquee>
+<!-- <marquee> element has onmouseover and onmouseout attributes that stop and start the
+     marquee animation when the mouse is hovered over or moved away from the element, respectively. -->
+
+<div class="box" onclick="this.style.backgroundColor='green'"> use of external js</div>
+
+<input type="button" value="checkoutput" onclick="first()">
+<!-- onclick attribute that calls a function first() -->
+
+   
+<script src="script.js"></script>
+<script>
+    function abcd()
+    {
+        alert("welcome to internal js link");
+    }
+</script>
+
+</body>
+</html>

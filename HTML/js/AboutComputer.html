@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*
+		{
+			margin:0 auto;
+			padding:0;
+		}
+		body
+		{
+			padding:10px;
+		}
+		p
+		{
+			border-bottom: 1px solid lightgray;
+			padding:5px;
+		}
+	</style>
+</head>
+<body>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+<script>																					
+var a,myscreen,mylocation,b,mynavigator;
+function abc()
+{
+	a = document.querySelectorAll('p');
+	myscreen = window.screen;
+	mylocation= window.location;
+	mynavigator = window.navigator;
+
+
+
+	console.log(mynavigator);
+	a[0].innerHTML =` screen width:${ myscreen.width} `;
+	a[1].innerHTML = ` screen height: ${myscreen.height}`;
+	a[2].innerHTML = ` screen coplor Depth: ${myscreen.colorDepth}`;
+	a[3].innerHTML = ` screen orientation type: ${myscreen.orientation.type}`;
+	a[4].innerHTML = ` current URL : ${mylocation.pathname}`;
+	a[5].innerHTML = ` current Hostname : ${mylocation.hostname}`;
+	a[6].innerHTML = ` current Host : ${mylocation.host}`;
+	a[7].innerHTML = ` install languages : ${mynavigator.languages}`;
+	a[8].innerHTML = ` details : ${mynavigator.appVersion}`;
+	a[9].innerHTML = ` Mobile Plat : ${mynavigator.userAgentData.mobile}`;
+	a[10].innerHTML = ` Mobile Plat : ${mynavigator.userAgentData.platform}`;
+
+
+	b= a[3].innerHTML =myscreen.orientation.type;
+
+	if(b==="landscape-primary")
+	{
+		alert("welcome to this page");
+	}
+	else
+	{
+		window.location.href="http://facebook.com";
+	}
+
+}
+abc();
+
+
+
+</script>
+
+</body>
+</html>

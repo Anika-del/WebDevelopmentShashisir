@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Form Example</h1>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone"><br><br>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea><br><br>
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+    <label for="radio">Radio:</label>
+    <input type="radio" id="radio1" name="radio" value="option1">Male
+    <input type="radio" id="radio2" name="radio" value="option2">Female<br><br>
+    <label for="select">Select:</label>
+    <select id="select" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select><br><br>
+    <button id="submit">Submit</button>
+  </form>
+  <div id="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

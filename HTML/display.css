@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    color: black;
+}
+/* div{
+    /* bydefault block level element h  
+    background-color: pink;
+    display: inline;
+} */
+/*button{
+    /* bydefault inline leve element h  
+    color: green;
+    display: block;
+}
+*/
+div{
+    /* bydefault block level element h  */
+   height: 300px;
+   width: 300px;
+   margin: 25px;
+   padding: 20px;
+   /* display: inline;       ye inline krne pr margin pagging top buttom set nhi hota h then we usie display:inline-block*/
+   display: inline-block;
+}
+section{
+    border: 2px solid gray;
+    height: 300px;
+   width: 300px;
+   margin: 25px;
+   padding: 20px;
+  background-color: grba(255,0,0,0.5);
+}

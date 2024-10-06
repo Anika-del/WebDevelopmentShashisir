@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+
+
+<script>
+var mydate= new Date();
+var h = mydate.getHours();
+var m = mydate.getMinutes();
+var s = mydate.getSeconds();
+console.log(mydate);
+console.log(typeof(mydate));
+console.log(h);
+
+var myheading;
+function abc()
+{
+    myheading = document.querySelectorAll("h1");
+    var mydate= new Date();
+var h = mydate.getHours();
+var m = mydate.getMinutes();
+var s = mydate.getSeconds();
+var mytime = h+":"+m+":"+s;
+    myheading[0].innerHTML=mytime;
+
+    if(h>=20 && m>=4)
+    {
+        window.close();
+    }
+
+
+}
+
+
+setInterval("abc()",1000);
+
+var i=0;
+setInterval(()=>{
+    myheading[2].innerHTML=i;
+    i++;
+},10);
+
+
+</script>
+    
+</body>
+</html>

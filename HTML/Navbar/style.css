@@ -1,0 +1,470 @@
+body {
+    padding:0;
+    margin:0;
+}
+nav {
+    padding:0;
+    margin:0;
+    height:60px;
+    display:flex;
+}
+
+nav > ul {
+    height:50px;
+    justify-content:center;
+    background-color:#a9a9a9;
+    width:100%;
+}
+nav ul{
+    margin:0 auto;
+    padding:0;
+    list-style-type:none;
+    display:inline-block;
+    border-radius:5px;
+    
+}
+
+
+
+ul .item {
+    float:left;
+    position:relative;
+    background-color: #a9a9a9;
+    font-family: arial, sans-serif;
+    font-size:15px;
+    font-weight:bold;
+    text-transform:uppercase;
+    width:150px;
+    height:50px;
+    line-height:50px;
+    border-radius:5px;
+    padding-left:3px;
+}
+
+.submenus  {
+    position:absolute;
+     top:100%;
+     left:0;
+    
+    width:100%;
+    padding:0;
+    
+    
+}
+
+.submenus > li {
+    border-radius:5px;
+    padding-left:3px;
+    background-color: #bababa;
+}
+
+.submenus > li:hover {
+    background-color: #a9a9a9;
+}
+
+.item:hover {
+    background-color:#8a8a8a; 
+}
+
+/*====TRIGGER====*/
+
+.submenus li{
+    display:none;
+}
+    
+.item:hover > .submenus li{
+    display:block;
+}    
+
+.item:hover nav ul.item::before {
+    display:block;
+}
+/*====end of trigger=====*/
+
+.item::before {
+    display:none;
+    content: "";
+    position:absolute;
+     top:0px;
+     left:2px;
+    background-color: #333;
+    float:left;
+    height:3px;
+    width:95%;
+    border-radius:1px;
+}
+
+/*=====effects======*/
+
+/*=====menu 1=======*/
+
+.menu1 li {
+    opacity:0;
+}
+
+@keyframes menu1 {
+    0% {opacity:0; 
+       transform:rotateX(90deg); }
+    
+    100% {opacity:1; 
+       transform:rotateX(0deg); }        
+}
+
+
+.menu1 li:nth-child(1) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:0ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu1 li:nth-child(2) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:200ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu1 li:nth-child(3) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:400ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu1 li:nth-child(4) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:600ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu1 li:nth-child(5) {
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:800ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+
+/*=====menu 2=======*/
+
+.menu2 li {
+    opacity:0;
+    transform-origin: top right;
+}
+
+@keyframes menu2 {
+    0% {opacity:0; 
+       transform:rotateZ(-50deg); }
+    
+    100% {opacity:1; 
+       transform:rotateZ(0deg); }        
+}
+
+
+.menu2 li:nth-child(1) {
+    animation-name: menu2;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:0ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu2 li:nth-child(2) {
+    animation-name: menu2;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:200ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu2 li:nth-child(3) {
+    animation-name: menu2;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:400ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu2 li:nth-child(4) {
+    animation-name: menu2;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:600ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu2 li:nth-child(5) {
+    animation-name: menu2;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:800ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+
+
+/*=====menu 3=======*/
+
+.menu3 li {
+    opacity:0;
+    
+}
+
+@keyframes menu3 {
+    0% {opacity:0; 
+       transform:translate(0px, 300px); }
+    
+    100% {opacity:1; 
+       transform:translate(0px, 0px); }        
+}
+
+
+.menu3 li:nth-child(1) {
+    animation-name: menu3;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:0ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu3 li:nth-child(2) {
+    animation-name: menu3;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:200ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu3 li:nth-child(3) {
+    animation-name: menu3;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:400ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu3 li:nth-child(4) {
+    animation-name: menu3;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:600ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu3 li:nth-child(5) {
+    animation-name: menu3;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:800ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+
+/*=====menu 4=======*/
+
+.menu4 li {
+    opacity:0;
+    
+}
+
+@keyframes menu4 {
+    0% { opacity: 0; 
+       transform:rotateZ(-350deg) scale(0);}
+    
+    100% {opacity:1; 
+       transform:rotateZ(0deg) scale(1);}        
+}
+
+
+.menu4 li:nth-child(1) {
+    animation-name: menu4;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:0ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu4 li:nth-child(2) {
+    animation-name: menu4;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:200ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu4 li:nth-child(3) {
+    animation-name: menu4;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:400ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu4 li:nth-child(4) {
+    animation-name: menu4;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:600ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu4 li:nth-child(5) {
+    animation-name: menu4;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:800ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+
+/*=====menu 5=======*/
+
+.menu5 li {
+    opacity:0;
+    
+}
+
+@keyframes menu5 {
+    0% { opacity: 0; 
+       transform:scale(0);}
+    70% {transform:scale(1.4);}
+    100% {opacity:1; 
+       transform:scale(1);}        
+}
+
+
+.menu5 li:nth-child(1) {
+    animation-name: menu5;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:0ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu5 li:nth-child(2) {
+    animation-name: menu5;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:200ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu5 li:nth-child(3) {
+    animation-name: menu5;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:400ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu5 li:nth-child(4) {
+    animation-name: menu5;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:600ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+.menu5 li:nth-child(5) {
+    animation-name: menu5;
+    animation-duration: 300ms;
+    animation-fill-mode:forwards;
+    animation-delay:800ms;
+    animation-timing-function:ease-in-out;
+    
+}
+
+
+.inner {
+  display: none;   
+  position: absolute;
+}
+
+.submenus>li:hover .inner {
+    display: block;
+}
+
+.inner1, .inner2, .inner3, .inner4, .inner5{
+    top: 3px;
+    left:150px;
+    
+    padding:5px;
+}
+
+.inner > li {
+    background-color: #a9a9a9;
+    border-radius:5px;
+    padding:5px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+.inner > li:hover {
+    background-color:#8a8a8a; 
+}
+
+.innerX {
+    position:absolute;
+       top: 3px;
+      left:150px;
+    display: none;
+
+    background-color: #a9a9a9;
+    border-radius:5px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+.innerX > li {
+    
+     
+    padding:4px;  
+    background-color: #a9a9a9;
+    border-radius:5px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+.inner>li:hover  .innerX {
+    display:block;
+}
+
+.innerX > li:hover {
+    background-color:#8a8a8a;
+}
+
+#container{
+   min-width:800px;
+    
+}

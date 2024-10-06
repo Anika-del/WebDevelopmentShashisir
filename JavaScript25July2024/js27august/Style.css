@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #status {
+    color: red;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .pending {
+    color: orange;
+  }
+
+  

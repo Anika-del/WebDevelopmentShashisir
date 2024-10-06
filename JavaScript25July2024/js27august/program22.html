@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <table width="800" align="center" border="1">
+        <thead>
+            <tr>
+                <th>sno</th>
+                <th>username</th>
+                <th>email id</th>
+                <th>dob</th>
+                <th>pass</th>
+            </tr>
+        </thead>
+        <tbody id="disdata">
+            
+        </tbody>
+       
+    </table>
+
+
+<script>
+function mygetalldata()
+{
+    var a = document.getElementById('disdata');
+    var localdata = JSON.parse(localStorage.getItem("chita"));
+    // console.log(localdata);
+    // console.log(typeof(localdata));
+ var mytemplate = localdata.map((d)=>{
+        return `<tr align="center">
+                <td>01</td>
+                <td>${d.username}</td>
+                <td>${d.emailid}</td>
+                <td>dob</td>
+                <td>pass</td>
+            </tr>`;
+    });
+    a.innerHTML=mytemplate.join("");
+}
+
+mygetalldata();
+
+
+</script>
+</body>
+</html>

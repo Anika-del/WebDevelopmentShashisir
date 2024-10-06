@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*
+		{
+			margin:0 auto;
+			padding:0;
+		}
+		#main
+		{
+			width:1200px;
+			height: auto;
+			border:1px solid red;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#main a
+		{
+			width:260px;
+			height: auto;
+			margin:15px;
+			box-shadow: 2px 2px 5px black;
+			padding:10px;
+			box-sizing: border-box;
+		}
+		#main img
+		{
+			width: 100%;
+		}
+		#main h5
+		{
+			padding:8px 2px;
+			text-align: center;
+		}
+		input[type="text"]
+		{
+			padding:10px;
+			margin:20px;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+
+<input type="text" placeholder="search movies" id="msearch">
+<div id="main">
+	
+
+</div>
+
+
+
+<script>
+var movies = [
+{
+	sno:1,
+	mname:'pk',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:2,
+	mname:'pk',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://facebook.com"
+},
+{
+	sno:3,
+	mname:'after',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://youtube.com"
+},
+{
+	sno:4,
+	mname:'pk',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:5,
+	mname:'before',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:6,
+	mname:'after',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:7,
+	mname:'before',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:8,
+	mname:'after',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411",
+	mdate:"10/01/2011",
+	mdis:"Movieposters.com is your one stop shop for everything posters! We",
+	mlinks:"http://google.com"
+},
+{
+	sno:9,
+	mname:'after',
+	mposter:"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg?ts=1636996180",
+	mdate:"10/12/2011",
+	mdis:"Movieposters.com is your",
+	mlinks:"http://google.com"
+}
+];
+console.log(movies);
+
+
+var movieswrapper,msearch;
+function loadallobject()
+{
+	movieswrapper = document.getElementById('main');
+	msearch = document.getElementById('msearch');
+}
+
+loadallobject();
+
+function allmovies()
+{
+	var allmov = movies.map((e)=>{
+		return `<a href="${e.mlinks}" target="_blank">
+					<img src="${e.mposter}">
+					<h5>${e.mdate}</h5>
+					<h3>${e.mdis}</h3>
+					<h2>Name: ${e.mname}</h2>
+				</a>`;
+			});
+	movieswrapper.innerHTML=allmov;
+}
+allmovies();
+
+
+
+
+
+msearch.addEventListener("input",()=>{
+	var mysearch = msearch.value;
+		var filtermovies = movies.filter((d)=>{
+			return d.mname==mysearch;
+		});
+
+	var newmaping = filtermovies.map((a)=>{
+		return `<a href="${a.mlinks}" target="_blank">
+					<img src="${a.mposter}">
+					<h5>${a.mdate}</h5>
+					<h3>${a.mdis}</h3>
+					<h2>Name: ${a.mname}</h2>
+				</a>`;
+			});
+
+		movieswrapper.innerHTML=newmaping;
+
+		if(mysearch.length==0)
+		{
+			movieswrapper.innerHTML="";
+			allmovies();
+			console.log("welcome");
+		}
+		
+
+})
+
+
+
+
+
+
+</script>
+	
+</body>
+</html>

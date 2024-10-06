@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+
+<input type="button" value="submit">
+
+   <script>
+    const mybtn = document.querySelectorAll("input");
+    var x=1;
+        mybtn[0].addEventListener("click",function(){
+            mybtn[0].setAttribute("title","mybutton");
+            // var a = mybtn[0].getAttribute("value");
+                
+                if(x==1)
+                {
+                    mybtn[0].setAttribute("value",'changevalue');
+                    mybtn[0].style.color="red";
+                    x++;
+                }
+                else
+                {
+                    mybtn[0].setAttribute("value",'submit');
+                    mybtn[0].style.color="blue";
+                    x=1;
+                }
+        });
+    
+
+setTimeout(()=>{
+    // mybtn[0].removeAttribute("style");
+    mybtn[0].remove();
+},5000);
+
+
+   </script> 
+    
+</body>
+</html>

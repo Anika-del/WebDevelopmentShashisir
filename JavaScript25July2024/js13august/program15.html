@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 40px;
+        }
+        .signature {
+            margin-top: 40px;
+        }
+        .signature p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+
+<script>
+    function dynletter()
+    {
+        var name=prompt("enter name");
+        var city = prompt("enter city");
+        var title = prompt("enmter title");
+        var mydiv = document.querySelectorAll('div');
+        var myletter = `<div class="header">
+        <h2>[Company Name]</h2>
+        <p>[Company Address]</p>
+        <p>[City, State, ZIP Code]</p>
+        <p>[Date]</p>
+    </div>
+
+    <div class="content">
+        <p><strong>To,</strong></p>
+        <p>[Candidate's Name]</p>
+        <p>[Candidate's Address]</p>
+        <p>[City, State, ZIP Code]</p>
+
+        <p>Dear <strong>[${name}]</strong>,</p>
+
+        <p><strong>Subject: Appointment Letter for the Position of [${title}]</strong></p>
+
+        <p>We are pleased to inform you that you have been selected for the position of <strong>[Job Title]</strong> at <strong>[Company Name]</strong>. Based on our discussions and your acceptance of our offer, we are excited to have you join our team.</p>
+
+        <p><strong>Details of Your Employment:</strong></p>
+        <ul>
+            <li><strong>Job Title:</strong> [${title}]</li>
+            <li><strong>Department:</strong> [Department Name]</li>
+            <li><strong>Reporting To:</strong> [Supervisor's Name and Designation]</li>
+            <li><strong>Joining Date:</strong> [Date]</li>
+            <li><strong>Work Location:</strong> [Office Address or Remote]</li>
+        </ul>
+
+        <p><strong>Compensation and Benefits:</strong></p>
+        <ul>
+            <li><strong>Annual CTC (Cost to Company):</strong> [Amount in local currency]</li>
+            <li><strong>Basic Salary:</strong> [Amount]</li>
+            <li><strong>Other Allowances:</strong> [Details of other allowances such as HRA, transport, etc.]</li>
+            <li><strong>Benefits:</strong> [Details of benefits like health insurance, bonuses, etc.]</li>
+        </ul>
+
+        <p><strong>Terms and Conditions:</strong></p>
+        <ol>
+            <li><strong>Probation Period:</strong> Your employment will be subject to a probation period of [X months]. Upon successful completion of the probation period, your employment will be confirmed.</li>
+            <li><strong>Working Hours:</strong> The standard working hours are from [Start Time] to [End Time], [Number] days a week. You may be required to work additional hours as necessary to fulfill your duties.</li>
+            <li><strong>Leave Policy:</strong> You will be entitled to [X days] of paid leave annually, subject to the company’s leave policy.</li>
+            <li><strong>Confidentiality:</strong> You are required to maintain the confidentiality of all company information and not disclose any such information to unauthorized persons.</li>
+            <li><strong>Termination:</strong> Either party may terminate the employment by giving [X weeks/months] of notice or compensation in lieu of the notice period.</li>
+        </ol>
+
+        <p>Please sign and return a copy of this letter as a token of your acceptance of the offer. We look forward to welcoming you to the <strong>[Company Name]</strong> family and hope for a long and mutually beneficial relationship.</p>
+    </div>
+
+    <div class="signature">
+        <p>Yours sincerely,</p>
+        <p><strong>[Your Name]</strong></p>
+        <p>[Your Designation]</p>
+        <p><strong>[Company Name]</strong></p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Acceptance:</strong></p>
+        <p>I, <strong>[Candidate's Name]</strong>, accept the terms and conditions stated in this appointment letter.</p>
+        <p>Signature: ______________________</p>
+        <p>Date: ___________________________</p>
+    </div>`;
+
+        mydiv[0].innerHTML=myletter;
+
+    }
+
+    dynletter();
+</script>
+
+    
+</body>
+</html>

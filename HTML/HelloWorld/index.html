@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <div>
+            <h1 id="h2"></h1>
+        </div>
+    </body>
+    <script>
+        window.onload=()=>{
+
+alert("It's a small code, but I spent a whole week in this... \n \n so... you know what to do... :)");
+
+alert("People start their journey early with Hello World.... but I've done it in my journey...")
+
+let doc = document.getElementById("h2")
+    
+    const alpha = "abcdefghijklmnopqrstuvwxyz";
+    
+    let H = -1;
+    let E = -1;
+    let L = -1;
+    let L2 = -1;
+    let O = -1;
+    let W = -1;
+   let O2= -1; 
+   let R = -1;
+   let L3 = -1;
+   let D = -1;
+    
+  const intervalId =   setInterval(()=>{
+    H++;
+    if(H<8){
+        doc.innerHTML = alpha[H];
+        
+        console.log(alpha[H])
+           }
+    
+    if(H>6 && E<4){
+            E++;       
+      doc.innerHTML =  alpha[7]+alpha[E];
+      
+      console.log(alpha[7]+alpha[E])
+         }
+         
+         if(E>3 && L<11){
+            L++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[L];
+             
+            console.log(alpha[7]+alpha[4] + alpha[L]) 
+         }
+         
+         if(L>10 && L2<11){
+         L2++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[L2];
+             
+             console.log(  alpha[7]+alpha[4] + alpha[11]+alpha[L2])
+         }
+        
+         if(L2>10 && O<14){
+         O++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[11] + alpha[O];
+             
+             console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] + alpha[O])
+         }
+        
+         if(O>13 && W<22){
+         W++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[W];
+             
+             console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[W])
+         }
+         
+         if(W>21 && O2<14){
+         O2++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[O2];
+             
+             console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[O2]
+             )
+         }
+         
+         if(O2>13 && R<17){
+         R++;
+            doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[R];
+            
+            console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[R])
+         }
+         
+         if(R>16 && L3<11){
+         L3++;
+             doc.innerHTML = alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[17]+ alpha[L3];
+             
+             console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[17]+ alpha[L3])
+         }
+         
+         if(L3>10 && D<3){
+         D++;
+           doc.innerHTML =  alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[17]+ alpha[11]+alpha[D] + "!";
+           
+           console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[17]+ alpha[11]+alpha[D])
+           
+           
+           if(D==3){ console.log(alpha[7]+alpha[4] + alpha[11]+alpha[11] +alpha[14] + " " + alpha[22]+ alpha[14]+alpha[17]+ alpha[11]+alpha[3]+"!")
+         }
+           }
+           
+          
+         
+         
+    },70);
+    
+}
+    </script>
+</html>

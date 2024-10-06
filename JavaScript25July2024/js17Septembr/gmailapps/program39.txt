@@ -1,0 +1,80 @@
+
+var myjsapp = [
+    {
+        appname:"google",
+        appurl:"http://google.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"facebook",
+        appurl:"http://facebook.com",
+        appimg:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8HI3rhjNY4BdQOiwKp1uSU0wCQdS8C5EeIA&s"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    },
+    {
+        appname:"google",
+        appurl:"http://gopoge.com",
+        appimg:"https://static-00.iconduck.com/assets.00/google-icon-2048x2048-pks9lbdv.png"
+    }
+]
+
+
+
+var jsapp,jsmyapp;
+function pageloadfunction()
+{
+    jsapp = document.getElementById('apps');
+    jsmyapp = document.getElementById('myapp');
+    var i=1;
+    jsapp.addEventListener("click",()=>{
+        if(i==1)
+        {   
+            jsmyapp.style.visibility="visible";
+            i++;
+        }
+        else
+        {
+            jsmyapp.removeAttribute('style');
+            i=1;
+
+        }
+    });
+
+
+    var app = myjsapp.map((d)=>{
+        return `<a href="${d.appurl}">
+                <img src="${d.appimg}">
+                <p>${d.appname}</p>
+            </a>`;
+    });
+
+    jsmyapp.innerHTML=app.join("");
+
+}
+pageloadfunction();
+
+

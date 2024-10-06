@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>dyn change background and foreground color (text)</h1>
+
+    <input type="button" value="dyninputfuncion" onclick="dyninput()">
+
+
+    <script>
+        function dyninput() {
+            var b = prompt("enter you background color", "green");
+
+            if (confirm("do you want to change background")) {
+                // document.bgColor = b;
+                var c = prompt("enter text color");
+                    if(confirm("do you want to change text color"))
+                    {
+                        document.bgColor=b;
+                        document.fgColor=c;
+                    }
+                    else
+                    {
+                        alert("sorry can't change");
+                    }
+
+            }
+            else {
+                alert("change nhi karunga");
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

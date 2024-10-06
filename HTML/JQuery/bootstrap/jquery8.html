@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquerydownload.js"></script>
+	<style>
+		div,section,header,footer,main
+		{
+			padding:20px;
+			border:1px solid gray;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<section>
+		<header>
+			<footer>
+				<main>
+					<h1>heading1</h1>
+				</main>
+			</footer>
+		</header>
+	</section>
+</div>
+
+
+<script>
+	
+	
+
+	$(document).ready(function(){
+		// $("h1").parents().css({border:'1px solid red'});
+		// $("h1").parentsUntil("section").css({border:'1px solid red'});
+		$("h1").parents().css({border:'1px solid red'});
+	})
+	
+</script>
+
+
+</body>
+</html>

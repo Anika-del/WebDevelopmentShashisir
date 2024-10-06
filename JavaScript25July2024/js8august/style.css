@@ -1,0 +1,13 @@
+*{
+    height: 100%;
+    width: 100% auto;
+    background-color: rgb(164, 109, 214);
+    columns: black;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid black;
+}
